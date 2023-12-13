@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Interface</title>
+</head>
+<body>
+  <h1>Chatbot Interface</h1>
+
+  <label for="queryInput">Enter your query:</label>
+  <input type="text" id="queryInput" placeholder="Type your query here">
+
+  <label for="responseOutput">Response:</label>
+  <textarea id="responseOutput" rows="5" cols="50" readonly></textarea>
+
+  <button onclick="getResponse()">Get Response</button>
+
+  <script>
+    function getResponse() {
+      // Get the user input from the query input box
+      const userInput = document.getElementById('queryInput').value;
+
+      // You would typically send the user input to the backend using a fetch request or similar
+      // For demonstration purposes, let's assume a simple response retrieval
+      // Replace this with your backend communication code
+      const fakeBackendResponse = `This is a response to: "${userInput}"`; // Replace this with your actual backend response
+
+      // Display the response in the output box
+      document.getElementById('responseOutput').value = fakeBackendResponse;
+    }
+  </script>
+</body>
+</html>
